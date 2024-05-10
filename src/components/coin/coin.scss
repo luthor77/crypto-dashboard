@@ -1,0 +1,41 @@
+section {
+  display: grid;
+  grid-gap: 20px;
+  padding: 12px 20px;
+  grid-template-columns: 3fr 2fr;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  h2 {
+    text-align: center;
+  }
+
+  .price,
+  .change {
+    transition: background-color 0.2s ease-in-out;
+
+    &.loading {
+      background-color: rgba(255, 255, 255, 87);
+    }
+  }
+
+  .price {
+    text-align: start;
+    font-weight: bold;
+  }
+
+  .change {
+    text-align: end;
+
+    &.red {
+      color: red;
+    }
+
+    &.green {
+      color: lightgreen;
+    }
+  }
+
+  svg {
+    max-width: 75%;
+  }
+}
